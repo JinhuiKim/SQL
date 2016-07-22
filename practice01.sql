@@ -37,7 +37,7 @@ SELECT count(*)
 --문제8
   SELECT upper(country_name) AS cn
     FROM countries
-ORDER BY cn DESC;
+ORDER BY cn ASC;
 
 --문제9
   SELECT region_name
@@ -46,7 +46,7 @@ ORDER BY length(region_name) DESC;
 
 
 --문제10
-SELECT distinct(LOWER(city))
-  FROM locations;
-  
+  SELECT distinct(LOWER(city))
+    FROM locations
+ORDER BY LOWER(city) ASC;   
 
