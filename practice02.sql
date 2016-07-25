@@ -48,4 +48,16 @@ select a.EMPLOYEE_ID, a.FIRST_NAME, a.LAST_NAME, b.DEPARTMENT_NAME
        DEPARTMENTS b
  where a.DEPARTMENT_ID = b.DEPARTMENT_ID
 ORDER BY a.LAST_NAME ASC;
+
+--문제6
+SELECT a.EMPLOYEE_ID,
+       a.LAST_NAME,
+       a.HIRE_DATE as "입사일", 
+       b.LAST_NAME as "매니저 이름(성)",
+       b.HIRE_DATE as "매니저 입사일"
+  FROM EMPLOYEES a,
+       EMPLOYEES b
+ WHERE a.MANAGER_ID = b.EMPLOYEE_ID
+   AND a.HIRE_DATE < b.HIRE_DATE;
+   
        
