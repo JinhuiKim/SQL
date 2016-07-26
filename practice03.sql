@@ -65,3 +65,12 @@ select a.JOB_ID, b.JOB_TITLE, a.DIFF_SALARY
                            from (   select ( MAX(SALARY) - MIN(SALARY) ) AS DIFF_SALARY
                                       from EMPLOYEES
                                   group by JOB_ID ) );
+                                  
+ select max (DIFF_SALARY)                                 
+ from (select JOB_ID,
+        ( MAX(SALARY) - MIN(SALARY) ) AS DIFF_SALARY
+    from EMPLOYEES
+group by JOB_ID) a;    
+
+                                  
+                                  
