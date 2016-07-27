@@ -28,6 +28,7 @@ select a.employee_id, a.first_name, a.last_name, b.job_title, a.salary
                             having avg(salary) = (  select max(avg(salary))
                                                       from employees
                                                   group by department_id) );
+  
 
 --문제4
 --1)
